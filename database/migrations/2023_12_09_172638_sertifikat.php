@@ -53,6 +53,13 @@ class Sertifikat extends Migration
             $table->longText("komentar");
             $table->timestamps();
         });
+
+        Schema::create('galeri', function (Blueprint $table) {
+            $table->bigIncrements('idgaleri');
+            $table->String("file");
+            $table->String("judul");
+            $table->timestamps();
+        });
     }
 
     /**
@@ -67,5 +74,6 @@ class Sertifikat extends Migration
         Schema::drop('pengunjung');
         Schema::drop('sertifikat');
         Schema::drop('komentar');
+        Schema::drop('galeri');
     }
 }

@@ -6,6 +6,7 @@ use App\Models\pojokM;
 use App\Models\kontenM;
 use App\Models\sertifikatM;
 use App\Models\komentarM;
+use App\Models\galeriM;
 use Illuminate\Http\Request;
 
 class umumC extends Controller
@@ -24,11 +25,13 @@ class umumC extends Controller
             "pojok" => $pojok,
         ]);
     }
+    
     public function sertifikat(Request $request)
     {
 
         try{
             $keyword = empty($request->keyword)?'':$request->keyword;
+            
             $sertifikat = sertifikatM::where("namapeserta", $keyword)->get();
     
             return view("pages.umum.sertifikat", [
@@ -39,6 +42,16 @@ class umumC extends Controller
         }catch(\Throwable $th){
             return redirect("/")->with('error', 'Terjadi kesalahan');
         }
+    }
+
+    public function galeri(Request $request)
+    {
+        $galeri = galeriM::get();
+
+        return view("pages.umum.galeri", [
+            "galeri" => $galeri,
+        ]);
+
     }
 
     public function download(Request $request, $idsertifikat)

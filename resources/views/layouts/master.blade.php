@@ -130,6 +130,14 @@
           </li>
           
           <li class="nav-item">
+            <a href="{{ url('galeri', []) }}" class="nav-link @yield('warnagaleri')">
+              <i class="nav-icon fas fa-image"></i>
+              <p>
+                Galeri
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ url('pojok', []) }}" class="nav-link @yield('warnapojok')">
               <i class="nav-icon fas fa-database"></i>
               <p>

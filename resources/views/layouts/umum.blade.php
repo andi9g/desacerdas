@@ -61,6 +61,10 @@
                             @endforeach
                         </div>
                     </li>
+                    <li class="nav-item @yield('activegaleri')">
+                        <a class="nav-link" href="{{ url('dokumentasi', []) }}">Galeri
+                        </a>
+                    </li>
                     <li class="nav-item @yield('activesertifikat')">
                         <a class="nav-link" href="{{ url('/e-sertifikat', []) }}">E-SERTIFIKAT
                         </a>
