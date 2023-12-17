@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="{{ url('css', ['cssku.css']) }}">
 
-    <title>E-SERTIFIKAT</title>
+    <title>DESA CERDAS</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light pb-0">
